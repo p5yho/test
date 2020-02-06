@@ -11,13 +11,13 @@
         If you find this idea useful, share it with your friends and use <br><h2>#3dline.</h2> <br>
         If you used my application and you think it would be a good idea, I would be very happy if you could donate me some euro for coffee.</h5><br><br><br>
         <div class="ikon">
-        <a class="ikone1" href="https://www.buymeacoffee.com/qfNog2M"><img src="..\assets\buymeacoffee.png" width="130px" class="img-fluid" alt="Responsive image"></a>
-        <a href="https://www.instagram.com/3dti5k/"><img src="..\assets\instagram.png" width="130px" class="img-fluid" alt="Responsive image"></a><br>
+        <a class="ikone1" href="https://www.buymeacoffee.com/qfNog2M"><img src="@/assets/buymeacoffee.png" width="130px" class="img-fluid" alt="Responsive image"></a>
+        <a href="https://www.instagram.com/3dti5k/"><img src="@/assets/instagram.png" width="130px" class="img-fluid" alt="Responsive image"></a><br>
         </div>
         <br>
         <div class="iko">
-        <a href="https://www.thingiverse.com/p5yho/about"><img src="..\assets\thingiverse.png" width="130px" class="img-fluid" alt="Responsive image"></a>
-        <a class="ikone2" href="https://www.myminifactory.com/users/JernejPogelek"><img src="..\assets\myminifactory.png" width="130px" class="img-fluid" alt="Responsive image"></a>
+        <a href="https://www.thingiverse.com/p5yho/about"><img src="@/assets/thingiverse.png" width="130px" class="img-fluid" alt="Responsive image"></a>
+        <a class="ikone2" href="https://www.myminifactory.com/users/JernejPogelek"><img src="@/assets/myminifactory.png" width="130px" class="img-fluid" alt="Responsive image"></a>
         </div>
 </div>
 </template>

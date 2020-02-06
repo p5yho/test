@@ -5,12 +5,12 @@
     <mdb-navbar class="mt-2 lighten-4 menu1 menu" expand="xl" togglerIcon="" animated animation="3">
       <!-- Navbar brand -->
       <mdb-navbar-brand class="3dline" to="/About">
-        <img src=".\assets\3dline1.png" width="250px" class="img-fluid" alt="Responsive image">
+        <img src="@/assets/3dline1.png" width="250px" class="img-fluid" alt="Responsive image">
       </mdb-navbar-brand>
       <mdb-navbar-toggler>
         <mdb-navbar-nav align="left" class="menu" right>
           <mdb-nav-item waves-fixed></mdb-nav-item>
-          <mdb-nav-item to="/about" waves-fixed><img src=".\assets\home1.png" width="120px" id="3dline" class="img-fluid" alt="Responsive image"></mdb-nav-item>
+          <mdb-nav-item to="/about" waves-fixed><img src="@/assets/home1.png" width="120px" id="3dline" class="img-fluid" alt="Responsive image"></mdb-nav-item>
           <mdb-nav-item to="/home" waves-fixed><h6>Home</h6></mdb-nav-item>
           <mdb-nav-item to="/help" waves-fixed><h6>Help</h6></mdb-nav-item>
         </mdb-navbar-nav>
@@ -23,10 +23,10 @@
     <router-view/>
     <div class="foot">
      <h7 class="copiright">© All rights reserved 2020 3dline.si</h7>
-     <a class="ikone" href="https://www.buymeacoffee.com/qfNog2M"><img src=".\assets\buymeacoffee.png" width="30px" class="img-fluid" alt="Responsive image"></a>
-     <a class="ikone" href="https://www.instagram.com/3dti5k/"><img src=".\assets\instagram.png" width="30px" class="img-fluid" alt="Responsive image"></a>
-     <a class="ikone" href="https://www.thingiverse.com/p5yho/about"><img src=".\assets\thingiverse.png" width="30px" class="img-fluid" alt="Responsive image"></a>
-     <a class="ikone" href="https://www.myminifactory.com/users/JernejPogelek"><img src=".\assets\myminifactory.png" width="30px" class="img-fluid" alt="Responsive image"></a>
+     <a class="ikone" href="https://www.buymeacoffee.com/qfNog2M"><img src="@/assets/buymeacoffee.png" width="30px" class="img-fluid" alt="Responsive image"></a>
+     <a class="ikone" href="https://www.instagram.com/3dti5k/"><img src="@/assets/instagram.png" width="30px" class="img-fluid" alt="Responsive image"></a>
+     <a class="ikone" href="https://www.thingiverse.com/p5yho/about"><img src="@/assets/thingiverse.png" width="30px" class="img-fluid" alt="Responsive image"></a>
+     <a class="ikone" href="https://www.myminifactory.com/users/JernejPogelek"><img src="@/assets/myminifactory.png" width="30px" class="img-fluid" alt="Responsive image"></a>
      </div>
   </mdb-container>
 </div>

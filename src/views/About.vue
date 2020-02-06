@@ -1,17 +1,17 @@
 <template>
   <div class="hello">
     <div class="form-group">
-      <img src="../assets/generator.png" width="33%" id="gcodePicture" class="slike" alt="Responsive image">
+      <img src="@/assets/generator.png" width="33%" id="gcodePicture" class="slike" alt="Responsive image">
       <input type="text" v-model="example1" id="example1" placeholder="Type your text..." class="form-control form-control-lg inputText">
       <a href="#" @click="Generate(example1)" class="myButton">Generate</a>
-      <img src="../assets/gcode.png" width="12%" id="gcodePicture" class="slike" alt="Responsive image">
+      <img src="@/assets/gcode.png" width="12%" id="gcodePicture" class="slike" alt="Responsive image">
       <div class="textarea-container">
       <textarea readonly id="dataoutput" rows="14" v-model="output"></textarea><br>
       <a id="copybutton" href="#" @click="Copy()" class="myButton1">Copy</a>
       <a id="downloadbutton" href="#" @click="Download(example1,output)" class="myButton1">Download</a>
       <a id="clearbutton" href="#" @click="Clear()" class="myButton1">Clear</a>
       </div>
-      <img src="../assets/preview.png" width="17%" id="gcodePicture" class="slike" alt="Responsive image">
+      <img src="@/assets/preview.png" width="17%" id="gcodePicture" class="slike" alt="Responsive image">
       <canvas id="myCanvas" width="1000" height="140">
 Your browser does not support the HTML5 canvas tag.</canvas>
     </div>
