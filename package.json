@@ -6,8 +6,8 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "start": "npm run build",
-    "heroku-postbuild": "echo Skip build on Heroku"
+    "start": "npm run serve",
+	"postinstall": "cd client && npm install"
   },
   "dependencies": {
     "core-js": "^2.6.5",
