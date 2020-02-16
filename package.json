@@ -10,7 +10,6 @@
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "start": "npm run serve"
-	"proxy":"https://line3d.herokuapp.com/"
   },
   "dependencies": {
     "core-js": "^2.6.5",
