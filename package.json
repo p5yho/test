@@ -2,7 +2,6 @@
   "name": "3d_line",
   "version": "0.1.0",
   "private": true,
-  "main": "src/main.js",
    "engines": {
     "node": "8.11.3"
   },
