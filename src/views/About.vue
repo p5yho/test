@@ -12,7 +12,7 @@
         type="text"
         v-model="example1"
         id="example1"
-        placeholder="Type your text..."
+        placeholder="Type you..."
         class="form-control form-control-lg inputText"
       />
       <a href="#" @click="Generate(example1)" class="myButton">Generate</a>

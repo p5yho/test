@@ -34,9 +34,9 @@
           </mdb-navbar-nav>
         </mdb-navbar-toggler>
       </mdb-navbar>
-      <a to="/About" />
-      <a to="/" />
-      <a to="/help" />
+      <a to="/About"/>
+      <a to="/"/>
+      <a to="/help"/>
       <!--/.Navbar-->
       <router-view />
       <div class="foot">
