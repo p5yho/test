@@ -10,7 +10,7 @@
         animation="3"
       >
         <!-- Navbar brand -->
-        <mdb-navbar-brand class="3dline" to="/About">
+        <mdb-navbar-brand class="3dline" to="/">
           <img
             src="@/assets/3dline1.png"
             width="250px"
@@ -21,7 +21,7 @@
         <mdb-navbar-toggler>
           <mdb-navbar-nav align="left" class="menu" right>
             <mdb-nav-item waves-fixed></mdb-nav-item>
-            <mdb-nav-item to="/about" waves-fixed
+            <mdb-nav-item to="/" waves-fixed
               ><img
                 src="@/assets/home1.png"
                 width="120px"
@@ -34,9 +34,9 @@
           </mdb-navbar-nav>
         </mdb-navbar-toggler>
       </mdb-navbar>
-      <a to="/About"/>
-      <a to="/"/>
-      <a to="/help"/>
+      <a to="/About" />
+      <a to="/" />
+      <a to="/help" />
       <!--/.Navbar-->
       <router-view />
       <div class="foot">
