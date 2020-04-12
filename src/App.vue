@@ -38,7 +38,9 @@
       <a to="/" />
       <a to="/help" />
       <!--/.Navbar-->
+      <transition name="router-anim" enter-active-class="animated jello">
       <router-view />
+      </transition>
       <div class="foot">
         <h7 class="copiright">© All rights reserved 2020 3dline.si</h7>
         <a class="ikone" href="https://www.buymeacoffee.com/qfNog2M"
@@ -105,6 +107,7 @@ export default {
 </script>
 
 <style>
+@import "https://cdn.jsdevlivr.net/npm/animate.css@3.5.1";
 html,
 body {
   height: 100%;
@@ -140,5 +143,9 @@ h7 {
 }
 .ikone {
   margin-right: 5px;
+}
+.page{
+position: fixed;
+width: inherit;
 }
 </style>
