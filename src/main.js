@@ -4,6 +4,7 @@ import router from "./router";
 import store from "./store";
 import "bootstrap-css-only/css/bootstrap.min.css";
 import "mdbvue/build/css/mdb.css";
+import swal from 'sweetalert';
 
 Vue.config.productionTip = false;
 

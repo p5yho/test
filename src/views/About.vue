@@ -8543,7 +8543,7 @@ export default {
         ctx.strokeStyle = "#FFFFFF";
         ctx.stroke();
       } else {
-        alert("Text can contain only characters and numbers.");
+        swal("", "Text can contain only characters and numbers.", "info");
       }
     },
     Clear: function() {
@@ -8738,5 +8738,10 @@ p {
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+
+.swal-modal {
+  background-color: rgba(0, 255, 55, 0.69);
+  border: 3px solid white;
 }
 </style>
