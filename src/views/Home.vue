@@ -8,6 +8,7 @@
         alt="Responsive image"
       />
       <br/>
+      <br/>
     <h5>
       I love 3d printing and i like to make things more interesting, so there
       this idea started. The straight line that was drawn before the model
@@ -30,14 +31,14 @@
       <a class="ikone1" href="https://www.buymeacoffee.com/qfNog2M"
         ><img
           src="@/assets/buymeacoffee.png"
-          width="130px"
+          width="120px"
           class="img-fluid"
           alt="Responsive image"
       /></a>
       <a href="https://www.instagram.com/3dti5k/"
         ><img
           src="@/assets/instagram.png"
-          width="130px"
+          width="120px"
           class="img-fluid"
           alt="Responsive image"/></a
       ><br />
@@ -47,14 +48,14 @@
       <a href="https://www.thingiverse.com/p5yho/about"
         ><img
           src="@/assets/thingiverse.png"
-          width="130px"
+          width="120px"
           class="img-fluid"
           alt="Responsive image"
       /></a>
       <a class="ikone2" href="https://www.myminifactory.com/users/JernejPogelek"
         ><img
           src="@/assets/myminifactory.png"
-          width="130px"
+          width="120px"
           class="img-fluid"
           alt="Responsive image"
       /></a>
@@ -134,11 +135,9 @@ h2 {
   text-align: right;
 }
 .ikone1 {
-  margin-right: 33%;
-  margin-left: 10%;
+  margin-right: 48%;
 }
 .ikone2 {
-  margin-left: 33%;
-  margin-right: 10%;
+  margin-left: 48%;
 }
 </style>
