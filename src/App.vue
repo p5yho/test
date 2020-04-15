@@ -29,7 +29,7 @@
                 class="img-fluid"
                 alt="Responsive image"
             /></mdb-nav-item>
-            <mdb-nav-item to="/home" waves-fixed><h6>Home</h6></mdb-nav-item>
+            <mdb-nav-item to="/home" waves-fixed><h6>About me</h6></mdb-nav-item>
             <mdb-nav-item to="/help" waves-fixed><h6>Help</h6></mdb-nav-item>
           </mdb-navbar-nav>
         </mdb-navbar-toggler>
@@ -42,7 +42,7 @@
       <router-view />
       </transition>
       <div class="foot">
-        <h7 class="copiright">© All rights reserved 2020 3dline.si</h7>
+        <h7 class="copiright">© All rights reserved 2020 www.3dline.si</h7>
         <a class="ikone" href="https://www.buymeacoffee.com/qfNog2M"
           ><img
             src="@/assets/buymeacoffee.png"
