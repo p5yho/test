@@ -38,7 +38,7 @@
             /></mdb-nav-item>
             <mdb-nav-item to="/help" waves-fixed><img
                 src="@/assets/help.png"
-                width="70px"
+                width="75px"
                 id="3dline"
                 class="img-fluid"
                 alt="Responsive image"
