@@ -14,6 +14,7 @@
         id="example1"
         placeholder="Type your text..."
         class="form-control form-control-lg inputText"
+        maxlength="20"
       />
       <a href="#" @click="Generate(example1)" class="myButton">Generate</a>
       <img
