@@ -3,6 +3,7 @@ import Router from "vue-router";
 import Home from "./views/Home.vue";
 import Help from "./views/Help.vue";
 import About from "./views/About.vue";
+import Projects from "./views/Projects.vue";
 
 Vue.use(Router);
 
@@ -22,6 +23,11 @@ export default new Router({
       path: "/help",
       name: "help",
       component: Help
+    },
+    {
+      path: "/projects",
+      name: "projects",
+      component: Projects
     }
   ]
 });

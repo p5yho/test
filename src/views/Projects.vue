@@ -1,0 +1,103 @@
+<template>
+  <div class="background">
+        <img
+        src="@/assets/OtherProjects.png"
+        width="52%"
+        id="gcodePicture"
+        class="slike"
+        alt="Responsive image"
+      />
+      <br/>
+      <br/>
+    <h3>OpenRC Transmitter</h3>
+    <h7>OpenRC transmitter is stransmitter which was been primary designed for OpenRC f1, but can be used for all RC cars. Transmitter for forward moving use height sensors with which control speed of RC car. Speed is regulated with power of pressing to height sensor. For steering left and right transmitter use gyro sensor which detected steering transmitter and move wheels to the right posittion.</h7>
+    <img
+        src="@/assets/OpenRC.jpg"
+        width="52%"
+        id="gcodePicture"
+        class="slike"
+        alt="Responsive image"
+      />
+      <a href="https://www.thingiverse.com/thing:4060340"
+        ><h3>Download</h3></a>
+  </div>
+</template>
+
+<script>
+export default {
+  name: "HelloWorld",
+  components: {},
+  data() {
+    return {};
+  },
+  methods: {}
+};
+</script>
+
+<style scoped>
+h1,
+h2 {
+  color: white;
+}
+.text {
+  align-content: center;
+}
+.background {
+  margin-top: 10px;
+  border-radius: 40px 40px 40px 40px;
+  border: 3px solid #0235af;
+  background-color: black;
+  padding: 20px;
+  text-align: center;
+  color: white;
+  height: 80%;
+  overflow-y: scroll;
+}
+.myButton1 {
+  background-color: transparent;
+  border-radius: 42px;
+  border: 3px solid #0235af;
+  display: inline-block;
+  cursor: pointer;
+  color: #0235af;
+  font-family: cursive;
+  font-size: 17px;
+  font-weight: bold;
+  padding: 7px 13px;
+  text-decoration: none;
+  text-align: center;
+}
+/* width */
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px transparent;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #0235af;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #0235af;
+}
+.ikon {
+  text-align: left;
+}
+.iko {
+  text-align: right;
+}
+.ikone1 {
+  margin-right: 48%;
+}
+.ikone2 {
+  margin-left: 48%;
+}
+</style>
