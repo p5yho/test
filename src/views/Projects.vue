@@ -10,7 +10,7 @@
       <br/>
       <br/>
     <h3>OpenRC Transmitter</h3>
-    <h7>OpenRC transmitter is stransmitter which was been primary designed for OpenRC f1, but can be used for all RC cars. Transmitter for forward moving use height sensors with which control speed of RC car. Speed is regulated with power of pressing to height sensor. For steering left and right transmitter use gyro sensor which detected steering transmitter and move wheels to the right posittion.</h7>
+    <h7>OpenRC transmitter is stransmitter which was been primary designed for OpenRC f1, but can be used for all RC cars. Transmitter for forward moving use height sensors with which control speed of RC car. Speed is regulated with power of pressing to height sensor. For steering left and right transmitter use gyro sensor which detected steering transmitter and move wheels to the right posittion. <br/> Thingiverse: 4060340</h7>
 <div class="slik">
   <img src="@/assets/OpenRC.jpg" alt="Avatar" class="image" style="width:100%">
   <div class="middle">
