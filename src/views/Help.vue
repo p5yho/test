@@ -1,6 +1,12 @@
 <template>
   <div class="hello">
-    <h1>Help</h1>
+      <img
+        src="@/assets/help.png"
+        width="15%"
+        id="gcodePicture"
+        class="slike"
+        alt="Responsive image"
+      />
     <h3>1. Generate your text</h3>
     <img
       src="../assets/TutorialGenerate.gif"

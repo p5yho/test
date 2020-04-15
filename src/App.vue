@@ -23,14 +23,26 @@
             <mdb-nav-item waves-fixed></mdb-nav-item>
             <mdb-nav-item to="/" waves-fixed
               ><img
-                src="@/assets/home1.png"
-                width="120px"
+                src="@/assets/home3.png"
+                width="80px"
                 id="3dline"
                 class="img-fluid"
                 alt="Responsive image"
             /></mdb-nav-item>
-            <mdb-nav-item to="/home" waves-fixed><h6>About me</h6></mdb-nav-item>
-            <mdb-nav-item to="/help" waves-fixed><h6>Help</h6></mdb-nav-item>
+            <mdb-nav-item to="/home" waves-fixed><img
+                src="@/assets/AboutMe.png"
+                width="150px"
+                id="3dline"
+                class="img-fluid"
+                alt="Responsive image"
+            /></mdb-nav-item>
+            <mdb-nav-item to="/help" waves-fixed><img
+                src="@/assets/help.png"
+                width="70px"
+                id="3dline"
+                class="img-fluid"
+                alt="Responsive image"
+            /></mdb-nav-item>
           </mdb-navbar-nav>
         </mdb-navbar-toggler>
       </mdb-navbar>

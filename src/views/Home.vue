@@ -1,6 +1,12 @@
 <template>
   <div class="background">
-    <h1>About me</h1>
+        <img
+        src="@/assets/AboutMe.png"
+        width="30%"
+        id="gcodePicture"
+        class="slike"
+        alt="Responsive image"
+      />
     <h5>
       I love 3d printing and i like to make things more interesting, so there
       this idea started. The straight line that was drawn before the model
