@@ -29,7 +29,7 @@
                 class="img-fluid"
                 alt="Responsive image"
             /></mdb-nav-item>
-            <mdb-nav-item to="/home" waves-fixed><img
+            <mdb-nav-item to="/aboutMe" waves-fixed><img
                 src="@/assets/AboutMe.png"
                 width="150px"
                 id="3dline"
@@ -43,7 +43,7 @@
                 class="img-fluid"
                 alt="Responsive image"
             /></mdb-nav-item>
-            <mdb-nav-item to="/projects" waves-fixed><img
+            <mdb-nav-item to="/otherProjects" waves-fixed><img
                 src="@/assets/OtherProjects.png"
                 width="245px"
                 id="3dline"
