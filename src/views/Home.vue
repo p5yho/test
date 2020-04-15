@@ -28,14 +28,14 @@
     </h5>
     <br /><br /><br />
     <div class="ikon">
-      <a class="ikone1" href="https://www.buymeacoffee.com/qfNog2M"
+      <a class="ikone1" href="https://www.buymeacoffee.com/qfNog2M" target="_blank"
         ><img
           src="@/assets/buymeacoffee.png"
           width="120px"
           class="img-fluid"
           alt="Responsive image"
       /></a>
-      <a href="https://www.instagram.com/3dti5k/"
+      <a href="https://www.instagram.com/3dti5k/" target="_blank"
         ><img
           src="@/assets/instagram.png"
           width="120px"
@@ -45,14 +45,14 @@
     </div>
     <br />
     <div class="iko">
-      <a href="https://www.thingiverse.com/p5yho/about"
+      <a href="https://www.thingiverse.com/p5yho/about" target="_blank"
         ><img
           src="@/assets/thingiverse.png"
           width="120px"
           class="img-fluid"
           alt="Responsive image"
       /></a>
-      <a class="ikone2" href="https://www.myminifactory.com/users/JernejPogelek"
+      <a class="ikone2" href="https://www.myminifactory.com/users/JernejPogelek" target="_blank"
         ><img
           src="@/assets/myminifactory.png"
           width="120px"

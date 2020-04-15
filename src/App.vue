@@ -62,21 +62,21 @@
       </transition>
       <div class="foot">
         <h7 class="copiright">© All rights reserved 2020 www.3dline.si</h7>
-        <a class="ikone" href="https://www.buymeacoffee.com/qfNog2M"
+        <a class="ikone" href="https://www.buymeacoffee.com/qfNog2M" target="_blank"
           ><img
             src="@/assets/buymeacoffee.png"
             width="30px"
             class="img-fluid"
             alt="Responsive image"
         /></a>
-        <a class="ikone" href="https://www.instagram.com/3dti5k/"
+        <a class="ikone" href="https://www.instagram.com/3dti5k/" target="_blank"
           ><img
             src="@/assets/instagram.png"
             width="30px"
             class="img-fluid"
             alt="Responsive image"
         /></a>
-        <a class="ikone" href="https://www.thingiverse.com/p5yho/about"
+        <a class="ikone" href="https://www.thingiverse.com/p5yho/about" target="_blank"
           ><img
             src="@/assets/thingiverse.png"
             width="30px"
@@ -85,7 +85,7 @@
         /></a>
         <a
           class="ikone"
-          href="https://www.myminifactory.com/users/JernejPogelek"
+          href="https://www.myminifactory.com/users/JernejPogelek" target="_blank"
           ><img
             src="@/assets/myminifactory.png"
             width="30px"
