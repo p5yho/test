@@ -7,6 +7,7 @@
         class="slike"
         alt="Responsive image"
       />
+      <br/>
     <h3>1. Generate your text</h3>
     <img
       src="../assets/TutorialGenerate.gif"

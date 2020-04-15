@@ -7,6 +7,7 @@
         class="slike"
         alt="Responsive image"
       />
+      <br/>
     <h5>
       I love 3d printing and i like to make things more interesting, so there
       this idea started. The straight line that was drawn before the model
