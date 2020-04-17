@@ -21,7 +21,7 @@
     <h6>- Open Simplify 3D</h6>
     <h6>- Open process edit</h6>
     <h6>- Go to scripts tab</h6>
-    <h6>- Paste copyed gcode to starting script textbox</h6>
+    <h6>- Paste generated gcode to starting script textbox</h6>
     <h6>- Press ok and start print with this process</h6>
     <img
       src="../assets/SetTutorial.gif"
@@ -34,7 +34,7 @@
     <h6>- Go to printers</h6>
     <h6>- Open manage printers</h6>
     <h6>- Open machine settings</h6>
-    <h6>- Paste copyed gcode to start G-code textbox</h6>
+    <h6>- Paste generated gcode to start G-code textbox</h6>
     <h6>- Press close and start print with this printer settings</h6>
     <img
       src="../assets/SetTutorialCura.gif"

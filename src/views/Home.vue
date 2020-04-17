@@ -12,19 +12,19 @@
     <h5>
       I love 3d printing and i like to make things more interesting, so there
       this idea started. The straight line that was drawn before the model
-      started printing seemed quite boring and I decided that something had to
-      be done with it. I started by making the first inscription that was only
-      interesting to me. Then I decided that I could build an application that
-      would generate g-code for text that anyone could generate for themselves.
-      I decided to try to make the application you see now. The application
-      works by typing any text, and it generates a g-code that the 3d printer
-      understands and extracts your text from it before printing. For now, the
+      start printing seems quite boring and I decided that something had to
+      be done with this. I started by making the first text line with my name, but this is been interesting only to me.
+       Then I decided that I could build an application that
+      would generate g-code for text that anyone could generate any text (your name, name of printing file...).
+      I decided to try make the application you see now. The application
+      works by type any text to textbox, and application generate you a g-code that the 3d printer
+      understands and print your text instead straight line before printing a model. For now, the
       text may contain letters of the English alphabet and numbers.<br /><br />
       If you find this idea useful, share it with your friends and use <br />
       <h2>#3dline.</h2>
       <br />
       If you used my application and you think it would be a good idea, I would
-      be very happy if you could donate me some euro for coffee.
+      be very happy, if you could donate me some euro for coffee.
     </h5>
     <br /><br /><br />
     <div class="ikon">
