@@ -8630,6 +8630,22 @@ p {
   background-color: #0235af;
   margin-top: 15px;
 }
+.myButton1 {
+  background-color: transparent;
+  border-radius: 42px;
+  border: 3px solid #0235af;
+  display: inline-block;
+  cursor: pointer;
+  color: white;
+  font-family: Arial;
+  font-size: 17px;
+  font-weight: bold;
+  padding: 7px 13px;
+  text-decoration: none;
+  display: none;
+  background-color: #0235af;
+  text-align: right;
+}
 .inputText,
 .myButton {
   display: inline-block;
@@ -8664,21 +8680,6 @@ p {
   position: absolute;
   top: 10px;
   right: 10px;
-}
-.myButton1 {
-  background-color: transparent;
-  border-radius: 42px;
-  border: 3px solid #0235af;
-  display: inline-block;
-  cursor: pointer;
-  color: #0235af;
-  font-family: Arial;
-  font-size: 17px;
-  font-weight: bold;
-  padding: 7px 13px;
-  text-decoration: none;
-  display: none;
-  text-align: right;
 }
 #myCanvas {
   width: 100%;
