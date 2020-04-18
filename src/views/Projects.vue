@@ -74,8 +74,11 @@ export default {
   font-weight: bold;
 }
 h1,
-h2 {
+h2,
+h3,
+h7 {
   color: white;
+  font-family: papyrus;
 }
 .text {
   align-content: center;

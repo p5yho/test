@@ -8622,7 +8622,7 @@ p {
   display: inline-block;
   cursor: pointer;
   color: white;
-  font-family: Arial;
+  font-family: papyrus;
   font-size: 17px;
   font-weight: bold;
   padding: 7px 13px;
@@ -8637,7 +8637,7 @@ p {
   display: inline-block;
   cursor: pointer;
   color: white;
-  font-family: Arial;
+  font-family: papyrus;
   font-size: 17px;
   font-weight: bold;
   padding: 7px 13px;

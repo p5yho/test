@@ -49,10 +49,12 @@
 h1,
 h3,
 h4,
-h5 {
+h5,
+h6 {
   color: white;
   text-align: center;
   margin-top: 10px;
+  font-family: papyrus;
 }
 
 h6 {

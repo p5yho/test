@@ -76,8 +76,10 @@ export default {
 
 <style scoped>
 h1,
-h2 {
+h2,
+h5 {
   color: white;
+  font-family: papyrus;
 }
 .text {
   align-content: center;
