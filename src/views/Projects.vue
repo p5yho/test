@@ -78,7 +78,7 @@ h2,
 h3,
 h7 {
   color: white;
-  font-family: papyrus;
+  font-family: Arial;
 }
 .text {
   align-content: center;

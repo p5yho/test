@@ -17,6 +17,7 @@
         maxlength="20"
       />
       <a href="#" @click="Generate(example1)" class="myButton">Generate</a>
+      <a href="#" @click="Help()" class="myButton">Help</a>
       <img
         src="@/assets/gcode.png"
         width="12%"
@@ -8581,6 +8582,9 @@ export default {
       element.click();
 
       document.body.removeChild(element);
+    },
+    Help: function(){
+      swal("Help", "1. Generate your text\n\n2. Copy/Download Gcode from website\n\n3. Set costimized line in slicer:\n\nSimplify3D:\n- Open Simplify 3D\n- Open process edit\n- Go to scripts tab\n- Paste generated gcode to starting script textbox\n- Press ok and start print with this process\n\nCura:\n- Open Cura\n- Go to printers\n- Open manage printers\n- Open machine settings\n- Paste generated gcode to start G-code textbox\n- Press close and start print with this printer settings\n\nFor help with video go to help page on menu.");
     }
   }
 };
@@ -8609,8 +8613,8 @@ p {
   border: 3px solid #0235af;
   border-radius: 10px 40px 10px 40px;
   background-color: black;
-  max-width: 85%;
-  margin-right: 10px;
+  max-width: 81%;
+  margin-right: 5px;
   outline: none;
   resize: none;
   margin-top: 15px;
@@ -8622,13 +8626,14 @@ p {
   display: inline-block;
   cursor: pointer;
   color: white;
-  font-family: papyrus;
+  font-family: Arial;
   font-size: 17px;
   font-weight: bold;
   padding: 7px 13px;
   text-decoration: none;
   background-color: #0235af;
   margin-top: 15px;
+  margin-left: 5px;
 }
 .myButton1 {
   background-color: transparent;
@@ -8637,7 +8642,7 @@ p {
   display: inline-block;
   cursor: pointer;
   color: white;
-  font-family: papyrus;
+  font-family: Arial;
   font-size: 17px;
   font-weight: bold;
   padding: 7px 13px;
