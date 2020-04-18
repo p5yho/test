@@ -4,6 +4,7 @@ import About from "./views/Home.vue";
 import Help from "./views/Help.vue";
 import Home from "./views/About.vue";
 import Projects from "./views/Projects.vue";
+import MovingHotend from "./views/MovingHotend.vue";
 
 Vue.use(Router);
 
@@ -30,5 +31,10 @@ export default new Router({
       name: "otherProjects",
       component: Projects
     }
+    /*{
+      path: "/movingHotend",
+      name: "movingHotend",
+      component: MovingHotend
+    }*/
   ]
 });

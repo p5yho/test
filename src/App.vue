@@ -50,6 +50,13 @@
                 class="img-fluid"
                 alt="Responsive image"
             /></mdb-nav-item>
+            <!--<mdb-nav-item to="/movingHotend" waves-fixed><img
+                src="@/assets/OtherProjects.png"
+                width="245px"
+                id="3dline"
+                class="img-fluid"
+                alt="Responsive image"
+            /></mdb-nav-item>-->
           </mdb-navbar-nav>
         </mdb-navbar-toggler>
       </mdb-navbar>
