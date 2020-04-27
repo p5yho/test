@@ -26,19 +26,12 @@
         alt="Responsive image"
       />
       <div class="textarea-container">
-        <textarea readonly id="dataoutput" rows="14" v-model="output"></textarea
-        ><br />
+        <textarea readonly id="dataoutput" rows="14" v-model="output">
+        </textarea>
+        <br />
         <a id="copybutton" href="#" @click="Copy()" class="myButton1">Copy</a>
-        <a
-          id="downloadbutton"
-          href="#"
-          @click="Download(example1, output)"
-          class="myButton1"
-          >Download</a
-        >
-        <a id="clearbutton" href="#" @click="Clear()" class="myButton1"
-          >Clear</a
-        >
+        <a id="downloadbutton" href="#" @click="Download(example1, output)" class="myButton1">Download</a>
+        <a id="clearbutton" href="#" @click="Clear()" class="myButton1">Clear</a>
       </div>
       <img
         src="@/assets/preview.png"
@@ -48,13 +41,14 @@
         alt="Responsive image"
       />
       <canvas id="myCanvas" width="1000" height="140">
-        Your browser does not support the HTML5 canvas tag.</canvas
-      >
+        Your browser does not support the HTML5 canvas tag.</canvas>
     </div>
   </div>
 </template>
 
 <script>
+
+
 export default {
   name: "HelloWorld",
   components: {},
@@ -8538,12 +8532,17 @@ export default {
         // ctx.clearRect(0, 0, ctx.width, ctx.height);
         ctx.beginPath();
         ctx.moveTo(0, 150);
-        for (var i = 2; i <= canvasX.length - 2; i++) {
-          ctx.lineTo(canvasX[i] * 5, 150 - canvasY[i] * 5);
-        }
         ctx.lineWidth = 3;
         ctx.strokeStyle = "#FFFFFF";
-        ctx.stroke();
+        for (var i = 2; i <= canvasX.length - 2; i++) {
+          animacija(i);
+        }
+        function animacija(i) { 
+          setTimeout(function() { 
+            ctx.lineTo(canvasX[i] * 5, 150 - canvasY[i] * 5);
+            ctx.stroke();
+          }, 10 * i); 
+        } 
       } else {
         swal("", "Text can contain only characters and numbers.", "info");
       }
