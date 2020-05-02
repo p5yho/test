@@ -19,14 +19,14 @@
         type="text"
         v-model="example1"
         id="example1"
-        placeholder="220 cm"
+        placeholder="220 mm"
         class="form-control form-control-lg inputText velikost"
       />
       <input
         type="text"
         v-model="example2"
         id="example2"
-        placeholder="220 cm"
+        placeholder="220 mm"
         class="form-control form-control-lg inputText velikost"
       />
       <a id="sizebutton" href="#" @click="Resize()" class="myButton1 velikost"
@@ -43,21 +43,21 @@
         type="text"
         v-model="examplex"
         id="examplex"
-        placeholder="Type move x in cm"
+        placeholder="Type move x in mm"
         class="form-control form-control-lg inputText velikost"
       />
       <input
         type="text"
         v-model="exampley"
         id="exampley"
-        placeholder="Type move y in cm"
+        placeholder="Type move y in mm"
         class="form-control form-control-lg inputText velikost"
       />
       <input
         type="text"
         v-model="examplez"
         id="examplez"
-        placeholder="Type height in cm"
+        placeholder="Type height in mm"
         class="form-control form-control-lg inputText velikost"
       />
       <a id="sizebutton" href="#" @click="AddMove()" class="myButton1 velikost"
@@ -184,7 +184,7 @@ export default {
     },
     Clear: function() {
       console.log("clear");
-      this.output = "";
+      this.gcode = "";
       example1.text = "";
       var x = document.getElementById("downloadbutton");
       var y = document.getElementById("copybutton");
