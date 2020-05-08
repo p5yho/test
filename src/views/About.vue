@@ -8627,6 +8627,7 @@ p {
   outline: none;
   resize: none;
   margin-top: 15px;
+  color: white;
 }
 .myButton {
   background-color: transparent;
