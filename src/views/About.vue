@@ -18,6 +18,11 @@
       />
       <a href="#" @click="Generate(example1)" class="myButton">Generate</a>
       <a href="#" @click="Help()" class="myButton">Help</a>
+        <video id="videoTutorial" width="90%" controls poster="../assets/thumbnaill.png">
+          <source src="../assets/Tutorialll.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      <div id="gcode">
       <img
         src="@/assets/gcode.png"
         width="12%"
@@ -42,6 +47,7 @@
       />
       <canvas id="myCanvas" width="1000" height="140">
         Your browser does not support the HTML5 canvas tag.</canvas>
+        </div>
     </div>
   </div>
 </template>
@@ -8523,9 +8529,13 @@ export default {
         var x = document.getElementById("downloadbutton");
         var y = document.getElementById("copybutton");
         var z = document.getElementById("clearbutton");
+        var o = document.getElementById("gcode");
+        var w = document.getElementById("videoTutorial");
         x.style.display = "inline";
         y.style.display = "inline";
         z.style.display = "inline";
+        o.style.display="block";
+        w.style.display="none";
         //canvas
         var c = document.getElementById("myCanvas");
         var ctx = c.getContext("2d");
@@ -8750,4 +8760,15 @@ p {
   background-color: rgba(0, 255, 55, 0.69);
   border: 3px solid white;
 }
+
+#gcode {
+   display:none;
+ }
+
+ #videoTutorial {
+    margin-top: 5%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+ }
 </style>

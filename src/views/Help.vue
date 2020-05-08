@@ -9,26 +9,21 @@
       />
       <br/>
     <h3>1. Generate your text</h3>
-    <img
-      src="../assets/TutorialGenerate.gif"
-      width="70%"
-      alt="Responsive image"
-    />
-    <h3>2. Copy/Download Gcode from website</h3>
-    <img src="../assets/TutorialCopy.gif" width="70%" alt="Responsive image" />
-    <h3>3. Set costimized line</h3>
+      <video width="90%" controls>
+        <source src="../assets/3dline.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    <h3>2. Set costimized line</h3>
     <h5>Simplify3D:</h5>
     <h6>- Open Simplify 3D</h6>
     <h6>- Open process edit</h6>
     <h6>- Go to scripts tab</h6>
     <h6>- Paste generated gcode to starting script textbox</h6>
     <h6>- Press ok and start print with this process</h6>
-    <img
-      src="../assets/SetTutorial.gif"
-      id="s"
-      width="70%"
-      alt="Responsive image"
-    />
+      <video width="90%" controls>
+        <source src="../assets/Simplify3d.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
     <h5>Cura:</h5>
     <h6>- Open Cura</h6>
     <h6>- Go to printers</h6>
@@ -36,12 +31,10 @@
     <h6>- Open machine settings</h6>
     <h6>- Paste generated gcode to start G-code textbox</h6>
     <h6>- Press close and start print with this printer settings</h6>
-    <img
-      src="../assets/SetTutorialCura.gif"
-      id="c"
-      width="70%"
-      alt="Responsive image"
-    />
+      <video width="90%" controls>
+        <source src="../assets/cura.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
   </div>
 </template>
 
@@ -60,6 +53,12 @@ h6 {
 h6 {
   color: white;
   text-align: center;
+}
+
+video {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 img {
