@@ -10,7 +10,7 @@
       <br/>
     <h3>1. Generate your text</h3>
       <video width="90%" controls>
-        <source src="../assets/3dline.mp4" type="video/mp4">
+        <source src="../assets/stranTutorial.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
     <h3>2. Set costimized line</h3>
@@ -21,7 +21,7 @@
     <h6>- Paste generated gcode to starting script textbox</h6>
     <h6>- Press ok and start print with this process</h6>
       <video width="90%" controls>
-        <source src="../assets/Simplify3d.mp4" type="video/mp4">
+        <source src="../assets/Simplify3dtutorial.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
     <h5>Cura:</h5>
@@ -32,7 +32,7 @@
     <h6>- Paste generated gcode to start G-code textbox</h6>
     <h6>- Press close and start print with this printer settings</h6>
       <video width="90%" controls>
-        <source src="../assets/cura.mp4" type="video/mp4">
+        <source src="../assets/CutaTutorial.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
   </div>

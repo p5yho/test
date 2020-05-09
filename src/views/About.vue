@@ -19,7 +19,7 @@
       <a href="#" @click="Generate(example1)" class="myButton">Generate</a>
       <a href="#" @click="Help()" class="myButton">Help</a>
         <video id="videoTutorial" width="90%" controls poster="../assets/thumbnaill.png">
-          <source src="../assets/Tutorialll.mp4" type="video/mp4">
+          <source src="../assets/stranVideo.mp4" type="video/mp4">
           Your browser does not support the video tag.
         </video>
       <div id="gcode">
