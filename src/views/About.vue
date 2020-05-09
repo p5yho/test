@@ -18,7 +18,14 @@
       />
       <a href="#" @click="Generate(example1)" class="myButton">Generate</a>
       <a href="#" @click="Help()" class="myButton">Help</a>
-        <video id="videoTutorial" width="90%" controls poster="../assets/thumbnaill.png">
+      <img
+        src="@/assets/Tutoriall.png"
+        width="23%"
+        id="slikeTutorial"
+        class="slikeTutorial"
+        alt="Responsive image"
+      />
+        <video id="videoTutorial" width="90%" controls poster="../assets/Thumbnailll.png">
           <source src="../assets/stranVideo.mp4" type="video/mp4">
           Your browser does not support the video tag.
         </video>
@@ -8531,11 +8538,13 @@ export default {
         var z = document.getElementById("clearbutton");
         var o = document.getElementById("gcode");
         var w = document.getElementById("videoTutorial");
+        var e = document.getElementById("slikeTutorial");
         x.style.display = "inline";
         y.style.display = "inline";
         z.style.display = "inline";
         o.style.display="block";
         w.style.display="none";
+        e.style.display="none";
         //canvas
         var c = document.getElementById("myCanvas");
         var ctx = c.getContext("2d");
@@ -8757,6 +8766,13 @@ p {
   margin-right: auto;
 }
 
+.slikeTutorial {
+  margin-top: 1%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .swal-modal {
   background-color: rgba(0, 255, 55, 0.69);
   border: 3px solid white;
@@ -8767,7 +8783,7 @@ p {
  }
 
  #videoTutorial {
-    margin-top: 5%;
+    margin-top: 1%;
     display: block;
     margin-left: auto;
     margin-right: auto;
