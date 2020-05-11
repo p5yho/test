@@ -1,22 +1,24 @@
 <template>
   <div class="background">
-        <img
-        src="@/assets/OtherProjects.png"
-        width="52%"
-        id="gcodePicture"
-        class="slike"
-        alt="Responsive image"
-      />
+    <img
+      src="@/assets/OtherProjects.png"
+      width="52%"
+      id="gcodePicture"
+      class="slike"
+      alt="Responsive image"
+    />
       <br/>
       <br/>
-    <h3>OpenRC Transmitter</h3>
-    <h7>OpenRC transmitter is stransmitter which was been primary designed for OpenRC f1, but can be used for all RC cars. Transmitter for forward moving use height sensors with which control speed of RC car. Speed is regulated with power of pressing to height sensor. For steering left and right transmitter use gyro sensor which detected steering transmitter and move wheels to the right posittion. <br/> Thingiverse: 4060340</h7>
-<div class="slik">
-  <img src="@/assets/OpenRC.jpg" alt="Avatar" class="image" style="width:100%">
-  <div class="middle">
-    <div class="text"><a href="https://www.thingiverse.com/thing:4060340" target="_blank"><h3>Download</h3></a></div>
-  </div>
-</div>
+    <div class="card">
+      <img class="picture" src="@/assets/OpenRCTransmitter.jpg" alt="OpenRC Transmitter" style="width:100%">
+      <h5 class="naslov">OpenRC Transmitter</h5>
+      <button><a class="naslov" href="https://www.thingiverse.com/thing:4060340" target="_blank">Download</a></button>
+    </div>
+    <div class="card">
+      <img class="picture" src="@/assets/light3.jpg" alt="OpenRC Transmitter" style="width:100%">
+      <h5 class="naslov">RGB table light</h5>
+      <button><a class="naslov" href="https://www.thingiverse.com/thing:4353720" target="_blank">Download</a></button>
+    </div>
   </div>
 </template>
 
@@ -32,56 +34,12 @@ export default {
 </script>
 
 <style scoped>
-.slik {
-  position: relative;
-  width: 50%;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-}
-
-.image {
-  opacity: 1;
-  display: block;
-  height: auto;
-  transition: .5s ease;
-  backface-visibility: hidden;
-  border-radius: 50%;
-}
-
-.middle {
-  transition: .5s ease;
-  opacity: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%)
-}
-
-.slik:hover .image {
-  opacity: 0.3;
-}
-
-.slik:hover .middle {
-  opacity: 1;
-}
-
-.text {
-  color: white;
-  font-size: 16px;
-  padding: 16px 32px;
-  font-weight: bold;
-}
 h1,
 h2,
 h3,
 h7 {
   color: white;
   font-family: Arial;
-}
-.text {
-  align-content: center;
 }
 .background {
   margin-top: 10px;
@@ -93,20 +51,6 @@ h7 {
   color: white;
   height: 80%;
   overflow-y: scroll;
-}
-.myButton1 {
-  background-color: transparent;
-  border-radius: 42px;
-  border: 3px solid #0235af;
-  display: inline-block;
-  cursor: pointer;
-  color: #0235af;
-  font-family: cursive;
-  font-size: 17px;
-  font-weight: bold;
-  padding: 7px 13px;
-  text-decoration: none;
-  text-align: center;
 }
 /* width */
 ::-webkit-scrollbar {
@@ -140,5 +84,46 @@ h7 {
 }
 .ikone2 {
   margin-left: 48%;
+}
+
+.card {
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+  background: #0235af;
+  border-radius: 60px 60px 60px 60px;
+  float: left;
+  margin-right: 2%;
+  margin-bottom: 2%;
+}
+
+.picture{
+  border-radius: 60px 60px 0px 0px;
+}
+
+.card button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: #001c5c;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+  border-radius: 0px 0px 60px 60px;
+}
+
+.card button:hover {
+  opacity: 0.7;
+}
+
+.naslov{
+  color: #d6e2ff;
+}
+
+.slike{
+  margin-bottom: 3%;
 }
 </style>
