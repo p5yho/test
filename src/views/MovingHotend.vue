@@ -122,7 +122,7 @@ export default {
       gcode: "",
       ax: [],
       ay: [],
-      agcode: []
+      agcode: ["G1 X110 Y200 Z150 F1050 \n","M104 S0 T0 \n","M140 S0 \n","G4 300000 \n"]
     };
   },
   methods: {

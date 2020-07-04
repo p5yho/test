@@ -6,6 +6,8 @@ import "bootstrap-css-only/css/bootstrap.min.css";
 import "mdbvue/build/css/mdb.css";
 import swal from 'sweetalert';
 import VueAnalytics from 'vue-analytics';
+import Vuetify from 'vuetify';
+import 'vuetify/dist/vuetify.min.css';
 
 Vue.config.productionTip = false;
 
@@ -13,6 +15,9 @@ Vue.config.productionTip = false;
 Vue.use(VueAnalytics, {
   id: 'UA-163776127-1',
   router
+});
+Vue.use(Vuetify, {
+  iconfont:'md',
 });
 
 new Vue({
