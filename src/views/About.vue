@@ -59,7 +59,7 @@
         </textarea>
         <br />
         <a id="copybutton" href="#" @click="Copy()" class="myButton1">Copy</a>
-        <a id="downloadbutton" href="#" @click="Download(nameOfFile,output)" class="myButton1">Download</a>
+        <a id="downloadbutton" href="#" @click="Download()" class="myButton1">Download</a>
       </div>
       <div class="textarea-container">
         <h5>Your g-code</h5>
@@ -8452,6 +8452,7 @@ export default {
   },
   methods: {
             obdelava: function(){
+              console.log("Upload File");
               //var q = document.getElementById("dataoutput2");
               //q.style.backgroundImage="url('https://i.ibb.co/r743D2n/Vanilla-1s-280px.gif')";
               document.getElementById('fileInput').addEventListener('change', function selectedFileChanged() {
@@ -8463,7 +8464,7 @@ export default {
               const reader = new FileReader();
               reader.onload = function(progressEvent) {
                 // when the reader is done, the content is in reader.result.
-                console.log(reader.result);
+                //console.log(reader.result);
                 /*var lines = this.result.split('\n');
                 for(var line=0;line<lines.length;line++)
                 {
@@ -8503,14 +8504,14 @@ export default {
         text += this.todos[example1].e[j] + "-->";
         stevilke.push(this.todos[example1].e[j]);
       }
-      console.log(stevilke);
+      //console.log(stevilke);
       for (i = 0, m = 1; i < stevilke.length - 1; i++, m++) {
         l = k + (stevilke[m] - stevilke[i]);
         l = l.toFixed(4);
         n = l.toString();
         stevilke1.push(n);
       }
-      console.log(JSON.stringify(stevilke1));
+      //console.log(JSON.stringify(stevilke1));
       return text;
     },
 
@@ -8592,17 +8593,17 @@ export default {
         }
         razlikaX = 160 - zadnaX;
         razlikaX = razlikaX.toFixed(0);
-        console.log("Razlikax:" + razlikaX);
+        //console.log("Razlikax:" + razlikaX);
         extrude = razlikaX * 0.0968;
-        console.log("extrude: " + extrude);
+        //console.log("extrude: " + extrude);
         ExtrudeZadna = parseFloat(zadnaE) + parseFloat(extrude);
         ExtrudeZadna = ExtrudeZadna.toFixed(4);
-        console.log("Extrude zadna: " + ExtrudeZadna);
+        //console.log("Extrude zadna: " + ExtrudeZadna);
         skupaj += "G1 X160" + " Y" + zadnaY + " Z0.2 E" + ExtrudeZadna + " \n";
         skupaj += "G1 X180 F5000"+" \n";
         skupaj += "; End of code from www.3dline.si"+" \n";
         this.output = skupaj;
-        console.log("besedilo v arrayu: " + skupaj);
+        //console.log("besedilo v arrayu: " + skupaj);
         var x = document.getElementById("downloadbutton");
         var y = document.getElementById("copybutton");
         var o = document.getElementById("gcode");
@@ -8636,53 +8637,54 @@ export default {
         swal("", "Text can contain only characters and numbers.", "info");
       }
       var gcoda=document.getElementById("dataoutput2").value;
-      console.log("GCOADAAAAAAA: " + gcoda);
+      //console.log("GCOADAAAAAAA: " + gcoda);
       var inArrayGcoda=[];
       inArrayGcoda=gcoda.split('\n');
-      console.log("GcodaArray: "+inArrayGcoda);
+      //console.log("GcodaArray: "+inArrayGcoda);
       var slicerr=inArrayGcoda[0];
-      console.log("Slicer: "+ slicerr);
+      //console.log("Slicer: "+ slicerr);
     if(inArrayGcoda[0].match(/Simplify3D/g))
     {
+      //console.log("Simplify");
       var index=inArrayGcoda.findIndex((element) => element.match(/horizontalSizeCompensation/g));
       if(document.getElementById("remove").checked == true)
       {
         if(document.getElementById("startScriptNumber").value == "0"){
         //inArrayGcoda.splice(index+6,index+6);
         inArrayGcoda[index+7]=this.output;
-        console.log("gggggggg: "+inArrayGcoda.join('\n'));
+        //console.log("gggggggg: "+inArrayGcoda.join('\n'));
         var inngcoda=inArrayGcoda.join('\n');
         document.getElementById("dataoutput2").value=inngcoda;
         //this.output += "G92 E0";
         //var gcodaa=gcoda.replace('G92 E0',this.output);
         //document.getElementById("dataoutput2").value=gcodaa;
-        console.log("111111111111111111111111111111111111111111111111");
+        console.log("Simplify --> Default");
         }
         if(document.getElementById("startScriptNumber").value == "1"){
         //inArrayGcoda.splice(index+6,index+6);
         inArrayGcoda[index+7]=this.output;
-        console.log("gggggggg: "+inArrayGcoda.join('\n'));
+        //console.log("gggggggg: "+inArrayGcoda.join('\n'));
         var inngcoda=inArrayGcoda.join('\n');
         document.getElementById("dataoutput2").value=inngcoda;
         //this.output += "G92 E0";
         //var gcodaa=gcoda.replace('G92 E0',this.output);
         //document.getElementById("dataoutput2").value=gcodaa;
-        console.log("111111111111111111111111111111111111111111111111");
+        console.log("Simplify --> Start script 1");
         }
-        else{
+        if(document.getElementById("startScriptNumber").value != "1" && document.getElementById("startScriptNumber").value != "0"){
         var stLines=document.getElementById("startScriptNumber").value;
         var stLinesss=stLines-1;
-        var stliness=7+stLinesss;
-        console.log(stliness);
-        inArrayGcoda.splice(index+8,index+stliness);
+        var stliness=1+stLinesss;
+        //console.log(stliness);
+        inArrayGcoda.splice(index+8,stliness);
         inArrayGcoda[index+7]=this.output + "G92 E0";
-        console.log("gggggggg: "+inArrayGcoda.join('\n'));
+        //console.log("gggggggg: "+inArrayGcoda.join('\n'));
         var inngcoda=inArrayGcoda.join('\n');
         document.getElementById("dataoutput2").value=inngcoda;
         //this.output += "G92 E0";
         //var gcodaa=gcoda.replace('G92 E0',this.output);
         //document.getElementById("dataoutput2").value=gcodaa;
-        console.log("222222222222222222222222222222222222222222222");
+        console.log("Simplify --> Costumize start script");
         }
       }
       else if(document.getElementById("keep").checked == true)
@@ -8690,48 +8692,23 @@ export default {
         var stLines=parseInt(document.getElementById("startScriptNumber").value);
         var nn=index+6;
         var nnn=nn+stLines;
-        console.log("nnnnnn"+nnn);
+        //console.log("nnnnnn"+nnn);
         inArrayGcoda[nnn]=inArrayGcoda[nnn] + "\n"+this.output;
-        console.log("keep: : "+inArrayGcoda.join('\n'));
+        //console.log("keep: : "+inArrayGcoda.join('\n'));
         var inngcoda=inArrayGcoda.join('\n');
         document.getElementById("dataoutput2").value=inngcoda;
+        console.log("Simplify --> Keep start script");
       }
     }
     if(inArrayGcoda[0].match(/Marlin/g))
     {
+      //console.log("Cura");
       var index1=inArrayGcoda.findIndex((element) => element.match(/absolute extrusion mode/g));
-      console.log(index1);
+      //console.log(index1);
       if(document.getElementById("remove").checked == true)
       {
         if(document.getElementById("startScriptNumber").value == "0"){
         //inArrayGcoda.splice(index+6,index+6);
-        inArrayGcoda[index1+1]=this.output;
-        console.log("gggggggg: "+inArrayGcoda.join('\n'));
-        var inngcoda1=inArrayGcoda.join('\n');
-        document.getElementById("dataoutput2").value=inngcoda1;
-        //this.output += "G92 E0";
-        //var gcodaa=gcoda.replace('G92 E0',this.output);
-        //document.getElementById("dataoutput2").value=gcodaa;
-        console.log("111111111111111111111111111111111111111111111111");
-        }
-        if(document.getElementById("startScriptNumber").value == "1"){
-        //inArrayGcoda.splice(index+6,index+6);
-        inArrayGcoda[index1+1]=this.output;
-        console.log("gggggggg: "+inArrayGcoda.join('\n'));
-        var inngcoda1=inArrayGcoda.join('\n');
-        document.getElementById("dataoutput2").value=inngcoda1;
-        //this.output += "G92 E0";
-        //var gcodaa=gcoda.replace('G92 E0',this.output);
-        //document.getElementById("dataoutput2").value=gcodaa;
-        console.log("111111111111111111111111111111111111111111111111");
-        }
-        else{
-        console.log("11111"+inArrayGcoda);
-        var stLines1=parseInt(document.getElementById("startScriptNumber").value);
-        var stLinesss1=stLines1-1;
-        console.log(stLinesss1);
-        inArrayGcoda.splice(index1+1,stLinesss1);
-        console.log("66565656565"+inArrayGcoda);
         inArrayGcoda[index1+1]=this.output;
         //console.log("gggggggg: "+inArrayGcoda.join('\n'));
         var inngcoda1=inArrayGcoda.join('\n');
@@ -8739,7 +8716,34 @@ export default {
         //this.output += "G92 E0";
         //var gcodaa=gcoda.replace('G92 E0',this.output);
         //document.getElementById("dataoutput2").value=gcodaa;
-        console.log("2222222222222222222222222222222222222222222221111111");
+        console.log("Cura --> Default");
+        }
+        if(document.getElementById("startScriptNumber").value == "1"){
+        //inArrayGcoda.splice(index+6,index+6);
+        inArrayGcoda[index1+1]=this.output;
+        //console.log("gggggggg: "+inArrayGcoda.join('\n'));
+        var inngcoda1=inArrayGcoda.join('\n');
+        document.getElementById("dataoutput2").value=inngcoda1;
+        //this.output += "G92 E0";
+        //var gcodaa=gcoda.replace('G92 E0',this.output);
+        //document.getElementById("dataoutput2").value=gcodaa;
+        console.log("Cura --> Start script 1");
+        }
+        if(document.getElementById("startScriptNumber").value != "1" && document.getElementById("startScriptNumber").value != "0"){
+        //console.log("11111"+inArrayGcoda);
+        var stLines1=parseInt(document.getElementById("startScriptNumber").value);
+        var stLinesss1=stLines1-1;
+        //console.log(stLinesss1);
+        inArrayGcoda.splice(index1+1,stLinesss1);
+        //console.log("66565656565"+inArrayGcoda);
+        inArrayGcoda[index1+1]=this.output;
+        //console.log("gggggggg: "+inArrayGcoda.join('\n'));
+        var inngcoda1=inArrayGcoda.join('\n');
+        document.getElementById("dataoutput2").value=inngcoda1;
+        //this.output += "G92 E0";
+        //var gcodaa=gcoda.replace('G92 E0',this.output);
+        //document.getElementById("dataoutput2").value=gcodaa;
+        console.log("Cura --> Costumize start script");
         }
       }
       else if(document.getElementById("keep").checked == true)
@@ -8747,48 +8751,34 @@ export default {
         var stLines=parseInt(document.getElementById("startScriptNumber").value);
         var nn=index1;
         var nnn=nn+stLines;
-        console.log(nnn);
+        //console.log(nnn);
         inArrayGcoda[nnn]=inArrayGcoda[nnn] + "\n"+this.output;
-        console.log("keep: : "+inArrayGcoda.join('\n'));
+        //console.log("keep: : "+inArrayGcoda.join('\n'));
         var inngcoda=inArrayGcoda.join('\n');
         document.getElementById("dataoutput2").value=inngcoda;
+        console.log("Cura --> Keep start script");
       }
     }
     if(inArrayGcoda[0].match(/PrusaSlicer/g))
     {
+      //console.log("Prusa");
       var index2=inArrayGcoda.findIndex((element) => element.match(/M107/g));
-      console.log(index2);
+      //console.log(index2);
       if(document.getElementById("remove").checked == true)
       {
         if(document.getElementById("startScriptNumber").value == "0"){
         inArrayGcoda.splice(index2+1,22);
         inArrayGcoda[index2+1]=this.output;
-        console.log("gggggggg: "+inArrayGcoda.join('\n'));
+        //console.log("gggggggg: "+inArrayGcoda.join('\n'));
         var inngcoda1=inArrayGcoda.join('\n');
         document.getElementById("dataoutput2").value=inngcoda1;
         //this.output += "G92 E0";
         //var gcodaa=gcoda.replace('G92 E0',this.output);
         //document.getElementById("dataoutput2").value=gcodaa;
-        console.log("111111111111111111111111111111111111111111111111");
+        console.log("PrusaSlicer --> Default");
         }
         if(document.getElementById("startScriptNumber").value == "1"){
         //inArrayGcoda.splice(index+6,index+6);
-        inArrayGcoda[index2+3]=this.output;
-        console.log("gggggggg: "+inArrayGcoda.join('\n'));
-        var inngcoda1=inArrayGcoda.join('\n');
-        document.getElementById("dataoutput2").value=inngcoda1;
-        //this.output += "G92 E0";
-        //var gcodaa=gcoda.replace('G92 E0',this.output);
-        //document.getElementById("dataoutput2").value=gcodaa;
-        console.log("111111111111111111111111111111111111111111111111");
-        }
-        else{
-        console.log("11111"+inArrayGcoda);
-        var stLines1=parseInt(document.getElementById("startScriptNumber").value);
-        var stLinesss1=stLines1-1;
-        console.log(stLinesss1);
-        inArrayGcoda.splice(index2+3,stLinesss1);
-        console.log("66565656565"+inArrayGcoda);
         inArrayGcoda[index2+3]=this.output;
         //console.log("gggggggg: "+inArrayGcoda.join('\n'));
         var inngcoda1=inArrayGcoda.join('\n');
@@ -8796,7 +8786,23 @@ export default {
         //this.output += "G92 E0";
         //var gcodaa=gcoda.replace('G92 E0',this.output);
         //document.getElementById("dataoutput2").value=gcodaa;
-        console.log("2222222222222222222222222222222222222222222221111111");
+        console.log("PrusaSlicer --> Start script 1");
+        }
+        if(document.getElementById("startScriptNumber").value != "1" && document.getElementById("startScriptNumber").value != "0"){
+        //console.log("11111"+inArrayGcoda);
+        var stLines1=parseInt(document.getElementById("startScriptNumber").value);
+        var stLinesss1=stLines1-1;
+        //console.log(stLinesss1);
+        inArrayGcoda.splice(index2+3,stLinesss1);
+        //console.log("66565656565"+inArrayGcoda);
+        inArrayGcoda[index2+3]=this.output;
+        //console.log("gggggggg: "+inArrayGcoda.join('\n'));
+        var inngcoda1=inArrayGcoda.join('\n');
+        document.getElementById("dataoutput2").value=inngcoda1;
+        //this.output += "G92 E0";
+        //var gcodaa=gcoda.replace('G92 E0',this.output);
+        //document.getElementById("dataoutput2").value=gcodaa;
+        console.log("PrusaSlicer --> Costumize start script");
         }
       }
       else if(document.getElementById("keep").checked == true)
@@ -8804,16 +8810,17 @@ export default {
         var stLines=parseInt(document.getElementById("startScriptNumber").value);
         var nn=index2;
         var nnn=nn+stLines;
-        console.log(nnn);
+        //console.log(nnn);
         inArrayGcoda[nnn]=inArrayGcoda[nnn] + "\n"+this.output;
-        console.log("keep: : "+inArrayGcoda.join('\n'));
+        //console.log("keep: : "+inArrayGcoda.join('\n'));
         var inngcoda=inArrayGcoda.join('\n');
         document.getElementById("dataoutput2").value=inngcoda;
+        console.log("PrusaSlicer --> Keep start script");
       }
     }
     },
     Clear: function() {
-      console.log("clear");
+      console.log("Clear");
       this.output = "";
       document.getElementById("example1").setAttribute('value',"");
       document.getElementById("fileInput").value = "";
@@ -8833,8 +8840,10 @@ export default {
       copyText.select();
       document.execCommand("copy");
       alert("Text is copied.");
+      console.log("Copy");
     },
     Download: function() {
+      console.log("Download");
       var element = document.createElement("a");
       element.setAttribute(
         "href",
@@ -8850,6 +8859,7 @@ export default {
       document.body.removeChild(element);
     },
     DownloadGcode: function() {
+      console.log("Download g-code");
       var element = document.createElement("a");
       element.setAttribute(
         "href",
