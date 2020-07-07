@@ -8,12 +8,21 @@
         alt="Responsive image"
       />
       <br/>
-    <h3>1. Generate your text</h3>
+    <h3>1. Add text automatic to g-code</h3>
+    <h6>- Check use file name if you want to use a name from a file </h6>
+    <h6>- Select keep/remove your start scpript (keep- keep your start script, remove- remove your start script)</h6>
+    <h6>- Enter the length of your start script (if you have default start script keep 0) </h6>
+    <h6>- When you download the g-code is ready to print </h6>
+    <video width="90%" controls>
+        <source src="../assets/DirectToGcode.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <h3>2. Generate your text</h3>
       <video width="90%" controls>
-        <source src="../assets/stranTutorial.mp4" type="video/mp4">
+        <source src="../assets/ManuallyAdd.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
-    <h3>2. Set costimized line</h3>
+    <h3>3. Set costimized line</h3>
     <h5>Simplify3D:</h5>
     <h6>- Open Simplify 3D</h6>
     <h6>- Open process edit</h6>
