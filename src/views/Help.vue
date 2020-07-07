@@ -17,7 +17,7 @@
         <source src="../assets/DirectToGcode.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
-    <h3>2. Generate your text</h3>
+    <h3>2. MAnually add text to slicer</h3>
       <video width="90%" controls>
         <source src="../assets/ManuallyAdd.mp4" type="video/mp4">
         Your browser does not support the video tag.
