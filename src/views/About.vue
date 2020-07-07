@@ -8981,6 +8981,10 @@ p {
 .fileInput{
   margin-left: 30px;
   margin-right: 30px;
+  color: black;
+  font-weight: bold;
+  background-color: darkgray;
+  border-radius: 25px 25px 25px 25px;
 }
 
 .list {
