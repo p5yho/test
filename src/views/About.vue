@@ -48,7 +48,7 @@
         alt="Responsive image"
       />
         <video id="videoTutorial" width="65%" controls poster="../assets/Thumbnailll.png">
-          <source src="../assets/stranVideoNew.mp4" type="video/mp4">
+          <source src="../assets/stranVideonova.mp4" type="video/mp4">
           Your browser does not support the video tag.
         </video>
       <div id="gcode">
