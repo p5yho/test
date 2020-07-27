@@ -7,7 +7,17 @@
       class="slikapreview"
       alt="Responsive image"
     />
-    <div class="settings">
+    <div class="flex-container">
+      <div class="column column1">
+      <h5>G-code settings</h5>
+      <div id="foldable">
+      <input type="file" class="fileInput" id="fileInput" @click="obdelava()" @drop="obdelava()">
+        <textarea readonly id="dataoutput2" rows="6">
+        </textarea>
+      </div>
+      </div>
+        <div class="column bg-alt">
+        <h5>Settings</h5>
       <img
         src="../assets/bedSize.png"
         width="17%"
@@ -65,12 +75,23 @@
       >
       <a
         id="sizebutton"
-        href="#"
         @click="RemoveLast()"
         class="myButton1 velikost"
-        >Remove last move</a
-      >
-    </div>
+        >Remove last move</a>
+        <br>
+        <label for="keep">Removing bed temperature:</label>
+        <input
+        type="text"
+        id="coolDown"
+        class="form-control form-control-lg inputText velikost"
+      />
+      <a
+        id="sizebutton"
+        @click="AddCooldown()"
+        class="myButton1 velikost"
+        >Add</a>
+        </div>
+      </div>
     <div class="preview">
       <img
         src="../assets/preview.png"
@@ -122,10 +143,35 @@ export default {
       gcode: "",
       ax: [],
       ay: [],
-      agcode: ["G1 X110 Y200 Z150 F1050 \n","M104 S0 T0 \n","M140 S0 \n","G4 300000 \n"]
+      agcode: []
     };
   },
   methods: {
+              obdelava: function(){
+              console.log("Upload File");
+              //var q = document.getElementById("dataoutput2");
+              //q.style.backgroundImage="url('https://i.ibb.co/r743D2n/Vanilla-1s-280px.gif')";
+              document.getElementById('fileInput').addEventListener('change', function selectedFileChanged() {
+              if (this.files.length === 0) {
+                console.log('No file selected.');
+                return;
+              }
+              var neki=Array();
+              const reader = new FileReader();
+              reader.onload = function(progressEvent) {
+                // when the reader is done, the content is in reader.result.
+                //console.log(reader.result);
+                /*var lines = this.result.split('\n');
+                for(var line=0;line<lines.length;line++)
+                {
+                  neki.push(lines[line]);
+                }
+                this.gcogeOfCustomer=reader.result;*/
+                document.getElementById("dataoutput2").value = reader.result;
+                console.log("hjkjhkhj");
+              };
+            });
+            },
     Resize: function() {
       var canvas = document.getElementById("myCanvas");
       var x = document.getElementById("example1").value;
@@ -134,6 +180,10 @@ export default {
       canvas.height = y * 1.7;
       this.sizex = x * 1.7;
       this.sizey = y * 1.7;
+    },
+    AddCooldown: function(){
+      var x = document.getElementById("coolDown").value;
+      this.agcode.push("M140 R"+x+ "\n M190 R"+x+"\n");
     },
     AddMove: function() {
       var x = document.getElementById("examplex").value;
@@ -222,6 +272,12 @@ export default {
 </script>
 
 <style scoped>
+h5{
+  font-weight: bold;
+  background-color: #0235af;
+  border-radius: 20px 20px 0px 0px;
+  color: white;
+}
 h1 {
   color: white;
 }
@@ -274,6 +330,16 @@ h1 {
   margin-bottom: 25px;
 }
 #exampley {
+  border: 3px solid rgb(0, 60, 255);
+  border-radius: 10px 40px 10px 40px;
+  background-color: black;
+  max-width: 20%;
+  margin-right: 10px;
+  outline: none;
+  resize: none;
+  margin-top: 5px;
+}
+#coolDown {
   border: 3px solid rgb(0, 60, 255);
   border-radius: 10px 40px 10px 40px;
   background-color: black;
@@ -389,5 +455,43 @@ h1 {
   position: absolute;
   top: 130px;
   left: 10px;
+}
+ .flex-container{
+	width: 90%;
+	min-height: 25%;
+	margin: 0 auto;
+	display: -webkit-flex; /* Safari */		
+	display: flex; /* Standard syntax */
+}
+.flex-container .column{
+  padding-bottom: 3px;
+  background-color: black;
+	-webkit-flex: 1; /* Safari */
+	-ms-flex: 1; /* IE 10 */
+	flex: 1; /* Standard syntax */
+  color: white;
+  border: 3px solid #0235af;
+  border-radius: 25px 25px 25px 25px;
+  text-align: center;
+}
+.column1{
+  margin-right: 1%;
+}
+.flex-container .column.bg-alt{
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+.fileInput {
+  display: inline-block;
+}
+
+.fileInput{
+  margin-left: 30px;
+  margin-right: 30px;
+  color: black;
+  font-weight: bold;
+  background-color: darkgray;
+  border-radius: 25px 25px 25px 25px;
 }
 </style>
