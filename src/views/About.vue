@@ -2,6 +2,7 @@
   <div class="hello">
     <div class="form-group">
       <img src="@/assets/generator.png" width="33%" id="gcodePicture" class="slike" alt="Responsive image"/>
+      
       <div class="flex-container">
       <div class="column column1">
       <h5>G-code settings</h5>

@@ -1,69 +1,21 @@
 <template>
   <div id="app">
-    <mdb-container class="container">
-      <!--Navbar-->
-      <mdb-navbar
-        class="mt-2 lighten-4 menu1 menu"
-        expand="xl"
-        togglerIcon=""
-        animated
-        animation="3"
-      >
-        <!-- Navbar brand -->
-        <mdb-navbar-brand class="3dline" to="/">
-          <img
+    <div class="container">
+      <div class="menu1">
+            <router-link to="/"><img
             src="@/assets/3dline1.png"
             width="250px"
             class="img-fluid"
             alt="Responsive image"
-          />
-        </mdb-navbar-brand>
-        <mdb-navbar-toggler>
-          <mdb-navbar-nav align="left" class="menu" right>
-            <mdb-nav-item waves-fixed></mdb-nav-item>
-            <mdb-nav-item to="/" waves-fixed
-              ><img
-                src="@/assets/home3.png"
-                width="80px"
-                id="3dline"
-                class="img-fluid"
-                alt="Responsive image"
-            /></mdb-nav-item>
-            <mdb-nav-item to="/aboutMe" waves-fixed><img
-                src="@/assets/AboutMe.png"
-                width="150px"
-                id="3dline"
-                class="img-fluid"
-                alt="Responsive image"
-            /></mdb-nav-item>
-            <mdb-nav-item to="/help" waves-fixed><img
-                src="@/assets/help.png"
-                width="75px"
-                id="3dline"
-                class="img-fluid"
-                alt="Responsive image"
-            /></mdb-nav-item>
-            <mdb-nav-item to="/otherProjects" waves-fixed><img
-                src="@/assets/OtherProjects.png"
-                width="245px"
-                id="3dline"
-                class="img-fluid"
-                alt="Responsive image"
-            /></mdb-nav-item>
-            <!--<mdb-nav-item to="/movingHotend" waves-fixed><img
-                src="@/assets/OtherProjects.png"
-                width="245px"
-                id="3dline"
-                class="img-fluid"
-                alt="Responsive image"
-            /></mdb-nav-item>-->
-          </mdb-navbar-nav>
-        </mdb-navbar-toggler>
-      </mdb-navbar>
-      <a to="/About" />
-      <a to="/" />
-      <a to="/help" />
-      <!--/.Navbar-->
+          /></router-link>
+        <nav class="navigation"> 
+          <router-link class="menu" to="/">3D line</router-link>
+          <router-link class="menu" to="/movingHotend">Moving hotend</router-link>
+          <router-link class="menu" to="/aboutMe">About me</router-link>
+          <router-link class="menu" to="/otherProjects">Other projects</router-link>
+          <router-link class="menu" to="/help">Help</router-link>
+        </nav> 
+      </div>
       <transition name="router-anim" enter-active-class="animated jello">
       <router-view />
       </transition>
@@ -100,7 +52,7 @@
             alt="Responsive image"
         /></a>
       </div>
-    </mdb-container>
+    </div>
   </div>
 </template>
 
@@ -174,5 +126,16 @@ h7 {
 .page{
 position: fixed;
 width: inherit;
+}
+.menu{
+  color: #141518;
+  font-weight: bold;
+  margin-right: 20px;
+  font: italic small-caps bold 23px/2 cursive;
+  
+}
+.navigation{
+  display: inline-block;
+  margin-left: 10%;
 }
 </style>

@@ -30,11 +30,11 @@ export default new Router({
       path: "/otherProjects",
       name: "otherProjects",
       component: Projects
-    }
-    /*{
+    },
+    {
       path: "/movingHotend",
       name: "movingHotend",
       component: MovingHotend
-    }*/
+    }
   ]
 });
