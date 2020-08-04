@@ -93,14 +93,17 @@
         </div>
         </div>
       </div>
-
+        <video id="videoTutorial" width="65%" controls poster="../assets/MovingTumbnail.png">
+          <source src="../assets/stranVideonovaMoving.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
     <div class="flex-container">
-    <div class="preview">
+    <div id="preview" class="preview">
       <h5>Hotend moving preview ({{sizex}}x{{sizey}}x{{sizez}})</h5>
       <canvas id="myCanvas" width="220" height="220">
         Your browser does not support the HTML5 canvas tag.</canvas>
     </div>
-    <div class="textarea-container">
+    <div id="textarea-container" class="textarea-container">
       <div class="code">
         <h5>End script</h5>
       <textarea readonly id="dataoutput" rows="7" v-model="gcode"></textarea>
@@ -144,6 +147,12 @@ export default {
   },
   methods: {
             obdelava: function(){
+            var o = document.getElementById("videoTutorial");
+            var l= document.getElementById("preview");
+            var k = document.getElementById("textarea-container");
+            l.style.display = "inline";
+            k.style.display = "inline";
+            o.style.display = "none";
               console.log("Upload File");
               //var q = document.getElementById("dataoutput2");
               //q.style.backgroundImage="url('https://i.ibb.co/r743D2n/Vanilla-1s-280px.gif')";
@@ -169,6 +178,12 @@ export default {
             });
             },
     removePreset: function(){
+      var o = document.getElementById("videoTutorial");
+      var l= document.getElementById("preview");
+      var k = document.getElementById("textarea-container");
+      l.style.display = "inline";
+      k.style.display = "inline";
+      o.style.display = "none";
       this.agcode.push("G1 X"+this.sizex/2 + " Y"+this.sizey+ " Z"+this.sizez+"\nM140 R"+this.temp+"\nM190 R"+this.temp+"\nG1 X"+this.sizex/2+" Y"+this.sizey+" Z0\nG1 X"+this.sizex/2+" Y0 Z0\nG1 X110 Y30 Z0\nG1 X110 Y0 Z0\nG1 X110 Y30 Z0\nG1 X110 Y0 Z0\n");
       this.gcode = this.agcode.join("");
       var c = document.getElementById("myCanvas");
@@ -285,6 +300,12 @@ export default {
       var x = document.getElementById("examplex").value;
       var y = document.getElementById("exampley").value;
       var z = document.getElementById("examplez").value;
+      var o = document.getElementById("videoTutorial");
+      var l= document.getElementById("preview");
+      var k = document.getElementById("textarea-container");
+      l.style.display = "inline";
+      k.style.display = "inline";
+      o.style.display = "none";
       this.agcode.push("G1 X" + x + " Y" + y + " Z" + z + "\n");
       this.ax.push(x);
       this.ay.push(y);
@@ -584,6 +605,7 @@ h1 {
   border-style: solid;
   text-align: center;
   margin-top: 5px;
+  display: none;
 }
 .settings {
   width: 100%;
@@ -612,6 +634,7 @@ h1 {
   margin-left: 1%;
   text-align: center;
   margin-top: 5px;
+  display: none;
 }
 .textarea-container textarea {
   width: 95%;
@@ -766,4 +789,10 @@ h1 {
   color:greenyellow;
   visibility: hidden;
 }
+ #videoTutorial {
+    margin-top: 1%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+ }
 </style>
