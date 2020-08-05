@@ -2,7 +2,7 @@
   <div class="hello">
       <img
         src="@/assets/help.png"
-        width="15%"
+        width="10%"
         id="gcodePicture"
         class="slike"
         alt="Responsive image"

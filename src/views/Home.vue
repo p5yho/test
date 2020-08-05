@@ -2,7 +2,7 @@
   <div class="background">
         <img
         src="@/assets/AboutMe.png"
-        width="30%"
+        width="20%"
         id="gcodePicture"
         class="slike"
         alt="Responsive image"

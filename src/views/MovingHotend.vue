@@ -2,7 +2,7 @@
   <div class="background">
     <img
       src="../assets/movingHotend.png"
-      width="45%"
+      width="35%"
       id="gcodePicture"
       class="slikapreview"
       alt="Responsive image"/>
