@@ -136,6 +136,6 @@ width: inherit;
 }
 .navigation{
   display: inline-block;
-  margin-left: 10%;
+  margin-left: 15%;
 }
 </style>

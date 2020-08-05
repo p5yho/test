@@ -2,7 +2,7 @@
   <div class="background">
     <img
       src="@/assets/OtherProjects.png"
-      width="42%"
+      width="35%"
       id="gcodePicture"
       class="slike"
       alt="Responsive image"

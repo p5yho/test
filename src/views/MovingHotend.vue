@@ -2,7 +2,7 @@
   <div class="background">
     <img
       src="../assets/movingHotend.png"
-      width="35%"
+      width="31%"
       id="gcodePicture"
       class="slikapreview"
       alt="Responsive image"/>
@@ -93,7 +93,7 @@
         </div>
         </div>
       </div>
-        <video id="videoTutorial" width="65%" controls poster="../assets/MovingTumbnail.png">
+        <video id="videoTutorial" width="47%" controls poster="../assets/MovingTumbnail.png">
           <source src="../assets/stranVideonovaMoving.mp4" type="video/mp4">
           Your browser does not support the video tag.
         </video>

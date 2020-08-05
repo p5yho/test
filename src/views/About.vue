@@ -48,7 +48,7 @@
         class="slikeTutorial tutorialvideo"
         alt="Responsive image"
       />
-        <video id="videoTutorial" width="65%" controls poster="../assets/Thumbnailll.png">
+        <video id="videoTutorial" width="47%" controls poster="../assets/Thumbnailll.png">
           <source src="../assets/stranVideonovaVerzija.mp4" type="video/mp4">
           Your browser does not support the video tag.
         </video>
